@@ -121,16 +121,19 @@ defer db.Close()
 ## **📩 Message Queues**
 ### **RabbitMQ**
 ```go
-conn, err := messaging.NewRabbitMQConnection("ser1", config, secrets)
+conn, err := rabbitmq.GetRabbitMQConnection(cfg.RabbitMQ[key])
 if err != nil {
-    log.Fatal(err)
+	log.Fatal(err)
 }
 ```
 
 ### **Kafka**
 ```go
-producer := messaging.NewKafkaProducer("serv1", config)
-producer.PublishMessage("my-topic", "Hello Kafka!")
+producer, _ := kafka.GetKafkaProducer(cfg.Kafka["serv1"].Broker)
+if err != nil {
+	log.Fatal(err)
+}
+kafka.PublishMessage(producer, "test-topic", "key1", "Valeu1")
 ```
 
 ---
