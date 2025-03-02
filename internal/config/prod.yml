@@ -1,0 +1,50 @@
+# these all are random values just to depict the real world scenario 
+database: 
+  ora1: 
+    username: user1
+    driver: godror
+    host: 161.12.40.157
+    port: 1521
+    dbname: "main"
+  ora2: 
+    username: user2
+    driver: godror
+    host: 151.15.50.157
+    port: 1521
+    dbname: "buyer"
+  ora3: 
+    username: user3
+    driver: godror
+    host: 172.60.60.157
+    port: 5429
+    dbname: "seller"
+  pg1: 
+    username: user1
+    driver: postgres
+    host: 35.241.40.157
+    port: 5432
+    dbname: "user"
+  pg2: 
+    username: user1
+    driver: postgres
+    host: 170.200.40.157
+    port: 5432
+    dbname: "emp"
+rabbitmq: 
+  ser1: 
+    host: 167.15.50.155
+    port: 8082
+    vhost: erp
+    username: erpuser
+  ser2: 
+    host: 169.69.69.69
+    port: 1521
+    vhost: erp
+    username: erpuser
+  ser1api: 
+    url: http://167.15.50.155:6782/rmq/publish
+kafka: 
+  serv1: 
+    broker: localhost:9092
+    group: goproject
+
